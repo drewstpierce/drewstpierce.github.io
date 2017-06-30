@@ -45,24 +45,6 @@ first place). */
     }
 })();
 
-
-
-
- $(window).scroll(function() {
-    console.log($(window).scrollTop());
-    var topDivHeight = $(".intro-section").height();
-    var viewPortSize = $(window).height();
-
-    var triggerAt = viewPortSize / 2.5;
-    var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
-
-    if ($(window).scrollTop() >= triggerHeight) {
-	$('.hideMe').css('visibility',
-			      'visible').hide().fadeIn();
-	$(this).off('scroll');
-    }
-}); 
-
 /* (function() {
     var canvas = document.getElementById('sunLines'),
             context = canvas.getContext('2d');

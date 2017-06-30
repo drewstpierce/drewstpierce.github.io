@@ -1,0 +1,78 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+  
+    width: 100%;
+    height: 100%;
+background: -moz-linear-gradient(top, rgba(42,161,152,0) 0%, rgba(42,161,152,0.62) 51%, rgba(65,149,133,0.7) 58%, rgba(203,75,22,1) 100%);
+background: -webkit-linear-gradient(top, rgba(42,161,152,0) 0%,rgba(42,161,152,0.62) 51%,rgba(65,149,133,0.7) 58%,rgba(203,75,22,1) 100%);
+background: linear-gradient(to bottom, rgba(42,161,152,0) 0%,rgba(42,161,152,0.62) 51%,rgba(65,149,133,0.7) 58%,rgba(203,75,22,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002aa198', endColorstr='#cb4b16',GradientType=0 );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 0;
+	font-family: 'Megrim', cursive;
+	background-color: #fdf6e3;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+	float: none;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+	display: inline-block;
+	text-align: center;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: 100%;
+    padding-top: 120px;
+    padding-right: 30%;
+    text-align: center;
+    background: none;
+    
+}
+
+.design-works-section {
+    height: 100%;
+    padding-top: 120px;
+    padding-right: 25%;
+    text-align: center;
+    background: none;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 120px;
+    padding-right: 25%;
+    text-align: center;
+    background: none;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 120px;
+    text-align: center;
+    background: none;
+}

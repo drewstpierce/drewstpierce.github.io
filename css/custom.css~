@@ -1,0 +1,131 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  z-index: 16;
+  background: -webkit-linear-gradient(rgba(255, 0, 0, 0), #fdf6e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 60pt;
+}
+
+h2 {
+  font-family: 'Shrikhand', cursive;
+  z-index: 16;
+  color: #fdf6e3;
+}
+
+#circle-shape-example { 
+  margin: 2rem; 
+}
+
+#circle-shape-example p { 
+  line-height: 1.8; 
+}
+
+#circle-shape-example .curve { 
+  width: 33%; height: auto;
+  min-width: 150px;
+  float: left;
+  margin-right:2rem; 
+  border-radius: 50%;
+  -webkit-shape-outside:circle();
+  shape-outside:circle();
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  z-index: 16;
+  color: #fdf6e3;
+  width: 18em;
+  text-align: justify;
+  margin-left: 12%;
+}
+
+h4:after {/* this adds an extra invisible line, so any other line is justified */
+  content:'';
+  display:inline-block;
+  width:100%;
+  vertical-align:top;
+  }
+
+canvas#skyLines {
+  display:block;
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+}
+
+canvas#sunLines {
+  display: block;
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+}
+
+#sun {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  margin-top: 10px;
+  background: -moz-linear-gradient(top, rgba(238,232,213,0) 22%, rgba(238,232,213,0.44) 56%, rgba(253,246,227,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(238,232,213,0) 22%,rgba(238,232,213,0.44) 56%,rgba(253,246,227,1) 100%);
+  background: linear-gradient(to bottom, rgba(238,232,213,0) 22%,rgba(238,232,213,0.44) 56%,rgba(253,246,227,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eee8d5', endColorstr='#fdf6e3',GradientType=0 );
+  position: fixed;
+  top: 10%;
+  left: 60%;
+  z-index: 4;
+
+}
+
+h2 .sub-header-text {
+
+  display: inline-block;
+  font-size: 1.875em;
+  z-index:15;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+.circle:before {
+  content: ' \25CF';
+  font-size: 400px;
+}
+
+container {
+  backaground-color: transparent;
+}
+
+row {
+  backaground-color: transparent;
+}
+
+.hideMe {
+  position:relative;
+  z-index: 16;
+  visibility: hidden;
+  height:100%;
+}
