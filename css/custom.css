@@ -27,6 +27,14 @@ h2 {
   color: #fdf6e3;
 }
 
+h5 {
+  font-family: 'Roboto', cursive;
+  z-index: 16;
+  color: #fdf6e3;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
 #circle-shape-example { 
   margin: 2rem; 
 }
@@ -108,11 +116,11 @@ body {
 }
 
 container {
-  backaground-color: transparent;
+  background-color: transparent;
 }
 
 row {
-  backaground-color: transparent;
+  background-color: transparent;
 }
 
 .hideMe {
