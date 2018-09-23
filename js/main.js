@@ -63,85 +63,89 @@ first place). */
     }
 }); 
 
-/* (function() {
-    var canvas = document.getElementById('sunLines'),
-            context = canvas.getContext('2d');
+//lightbox stuff
 
-  
-    window.addEventListener('resize', resizeCanvas, false);
+(function($) {
 
-    function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+	skel
+		.breakpoints({
+			desktop: '(min-width: 737px)',
+			tablet: '(min-width: 737px) and (max-width: 1200px)',
+			mobile: '(max-width: 736px)'
+		})
+		.viewport({
+			breakpoints: {
+				tablet: {
+					width: 1080
+				}
+			}
+		});
 
-            drawSunLines();
+	$(function() {
 
-    }
+		var	$window = $(window),
+			$body = $('body');
 
-    resizeCanvas();
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
 
-    function drawSunLines() {
-      var j;
-      context.beginPath();
-	context.strokeStyle = "#020202;";
-	for (j = 0; j >= -16; j--) {
-	    context.lineWidth = j - 2;
-              context.rect(0, 0, canvas.width, canvas.height/j + 425 );
-            }
-            context.stroke();
-    }
-})();
+			$window.on('load', function() {
+				$body.removeClass('is-loading');
+			});
 
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
 
+		// Prioritize "important" elements on mobile.
+			skel.on('+mobile -mobile', function() {
+				$.prioritize(
+					'.important\\28 mobile\\29',
+					skel.breakpoint('mobile').active
+				);
+			});
 
- $(document).ready(function() {
+		// Dropdowns.
+			$('#nav > ul').dropotron({
+				mode: 'fade',
+				noOpenerFade: true,
+				alignment: 'center'
+			});
 
+		// Off-Canvas Navigation.
 
-    $(window).scroll( function(){
+			// Title Bar.
+				$(
+					'<div id="titleBar">' +
+						'<a href="#navPanel" class="toggle"></a>' +
+					'</div>'
+				)
+					.appendTo($body);
 
+			// Navigation Panel.
+				$(
+					'<div id="navPanel">' +
+						'<nav>' +
+							$('#nav').navList() +
+						'</nav>' +
+					'</div>'
+				)
+					.appendTo($body)
+					.panel({
+						delay: 500,
+						hideOnClick: true,
+						hideOnSwipe: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'left',
+						target: $body,
+						visibleClass: 'navPanel-visible'
+					});
 
+			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
+				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+					$('#titleBar, #navPanel, #page-wrapper')
+						.css('transition', 'none');
 
-        $('.hideMe').each( function(i){
+	});
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-
-            if( bottom_of_window /2 > bottom_of_object /2 ){
-
-                $(this).animate({'opacity':'1'},500);
-
-
-            } else if ( bottom_of_window /2 < bottom_of_object / 2 ) {
-              $(this).animate({'opacity':'0'},500);
-            }
-
-        });
-
-    });
-
-});
-
- var mywindow = $(window);
-var mypos = mywindow.scrollTop();
-mywindow.scroll(function() {
-    if(mywindow.scrollTop() > mypos)
-    {
-        $('.hideMe').fadeOut();
-    }
-    else
-    {
-        $('.hideMe').fadeIn();
-    }
-    mypos = mywindow.scrollTop();
- }); 
-
- $(window).scroll(function(){
-  var $maxScroll = 3000;
-  var $maxScale = 1;
-  var $x = $(window).scrollTop()/800+1;
-  if($(window).scrollTop() > $maxScroll) $x=$maxScale;
-    $('#sun').css({transform: 'scale('+$x+','+$x+')'});
-});
-
-*/
+})(jQuery);
