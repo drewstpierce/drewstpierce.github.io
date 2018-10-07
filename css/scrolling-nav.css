@@ -119,6 +119,14 @@ of those sections to manage the look and feel of the site. */
         text-align: center;
         background: none;
     }
+
+    .gallery-section {
+        height: 100%;
+        padding-top: 120px;
+        padding-right: 25%;
+        text-align: center;
+        background: none;
+    }
     
     .contact-section {
         height: 100%;
