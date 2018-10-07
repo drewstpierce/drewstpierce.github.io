@@ -130,3 +130,40 @@ row {
   visibility: hidden;
   height:100%;
 }
+
+@media (max-width: 800px) {
+  h1 {
+    font-family: 'Shrikhand', cursive;
+    z-index: 16;
+    background: -webkit-linear-gradient(rgba(255, 0, 0, 0), #fdf6e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    font-size: 30pt;
+  }
+  
+  h2 {
+    font-family: 'Shrikhand', cursive;
+    z-index: 16;
+    font-size: 15pt;
+    color: #fdf6e3;
+  }
+
+  h2 .sub-header-text {
+
+    display: inline-block;
+    font-size: 1em;
+    z-index:15;
+  }
+  
+  h4 {
+    font-family: "Roboto", sans-serif;
+    z-index: 16;
+    color: #fdf6e3;
+    font-size: 12pt;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

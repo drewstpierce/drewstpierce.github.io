@@ -93,3 +93,37 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: none;
 }
+
+@media (max-width: 800px) {
+    .intro-section {
+        height: 100%;
+        padding-top: 120px;
+        padding-right: 30%;
+        text-align: center;
+        background: none;
+        
+    }
+    
+    .design-works-section {
+        height: 100%;
+        padding-top: 120px;
+        padding-right: 25%;
+        text-align: center;
+        background: none;
+    }
+    
+    .about-section {
+        height: 100%;
+        padding-top: 120px;
+        padding-right: 25%;
+        text-align: center;
+        background: none;
+    }
+    
+    .contact-section {
+        height: 100%;
+        padding-top: 120px;
+        text-align: center;
+        background: none;
+    }
+}
